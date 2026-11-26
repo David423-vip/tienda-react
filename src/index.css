@@ -1,0 +1,85 @@
+/* Identidad visual del sitio original: crema pastel, chocolate y rosa suave. */
+:root {
+  --chocolate: #8B4513;
+  --chocolate-oscuro: #6b340e;
+  --crema: #FFF5E1;
+  --rosa: #FFC0CB;
+  --texto: #5D4037;
+  --bs-body-font-family: 'Lato', system-ui, sans-serif;
+  --bs-body-color: #5D4037;
+  --bs-link-color: #8B4513;
+  --bs-link-color-rgb: 139, 69, 19;
+  --bs-link-hover-color: #6b340e;
+}
+
+body { background-color: var(--crema); }
+
+.logo, .titulo-cursiva { font-family: 'Pacifico', cursive; font-weight: 400; }
+.text-chocolate { color: var(--chocolate) !important; }
+.text-rosa { color: var(--rosa) !important; }
+.bg-crema { background-color: var(--crema); }
+
+/* Encabezado */
+.encabezado { background-color: var(--chocolate); color: #fff; }
+.encabezado .logo { font-size: 2.4rem; margin: 0; }
+.enlace-logo, .enlace-logo:hover { color: inherit; text-decoration: none; }
+.subtitulo-header { color: var(--rosa); }
+.encabezado .nav-link { color: #fff !important; font-weight: 700; border-radius: 8px; padding: .45rem .75rem !important; }
+.encabezado .nav-link:hover, .encabezado .nav-link.active { background: var(--rosa); color: var(--texto) !important; }
+.encabezado .btn-registro { border: 1px solid var(--rosa); }
+.rol-chip { background: var(--rosa); color: var(--texto); border-radius: 10px; padding: 0 6px; font-size: .7rem; }
+.encabezado .dropdown-menu .dropdown-item { color: var(--texto); }
+
+/* Botones */
+.btn-chocolate { background-color: var(--chocolate); border-color: var(--chocolate); color: #fff; }
+.btn-chocolate:hover, .btn-chocolate:focus, .btn-chocolate:active { background-color: var(--chocolate-oscuro) !important; border-color: var(--chocolate-oscuro) !important; color: #fff !important; }
+.btn-chocolate:disabled { background-color: #b08060; border-color: #b08060; }
+.btn-rosa { background: var(--rosa); color: var(--texto) !important; border-color: var(--rosa); font-weight: 700; }
+
+/* Portada */
+.hero {
+  background: linear-gradient(rgba(93,64,55,.65), rgba(93,64,55,.65)), url('/img/hero.svg') center/cover;
+  color: #fff; padding: 5rem 0;
+}
+.seccion-titulo { font-family: 'Pacifico', cursive; color: var(--chocolate); margin-bottom: 1rem; }
+.tarjeta-info, .tarjeta-beneficio { background: #fff; border-radius: 14px; padding: 1.5rem; text-align: center; box-shadow: 0 2px 10px rgba(93,64,55,.08); }
+.tarjeta-beneficio { border-top: 4px solid var(--rosa); }
+.tarjeta-info .icono, .tarjeta-beneficio .icono { font-size: 2.2rem; }
+.visitanos { background: #fff; border-radius: 14px; border: 2px dashed var(--rosa); }
+.pagina-texto { max-width: 900px; }
+
+/* Catálogo */
+.filtros { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(93,64,55,.06); }
+.tarjeta-producto { border: none; border-radius: 14px; overflow: hidden; transition: transform .15s; }
+.tarjeta-producto:hover { transform: translateY(-3px); }
+.img-producto { width: 100%; object-fit: cover; background: #fde9ec; display: block; }
+.miniatura { width: 56px !important; border-radius: 8px; }
+.etiqueta-stock { position: absolute; top: 10px; left: 10px; }
+.precio { color: var(--chocolate); font-weight: 700; font-size: 1.2rem; }
+.link-titulo { color: var(--texto); text-decoration: none; }
+.link-titulo:hover { color: var(--chocolate); }
+.resumen { background: #fff; border-radius: 14px; box-shadow: 0 2px 10px rgba(93,64,55,.08); position: sticky; top: 1rem; }
+.tabla-carrito { border-radius: 12px; overflow: hidden; }
+.mapa { border-radius: 14px; overflow: hidden; border: 3px solid var(--rosa); }
+
+/* Pie */
+.pie { background: var(--texto); color: #fff; }
+
+/* Panel */
+.panel-lateral { width: 240px; min-width: 240px; background: var(--texto); color: #fff; position: sticky; top: 0; height: 100vh; }
+.panel-lateral .nav-link { color: #fff; border-radius: 8px; }
+.panel-lateral .nav-link:hover, .panel-lateral .nav-link.active { background: var(--rosa); color: var(--texto); }
+.indicador { border-left: 5px solid var(--chocolate) !important; }
+.borde-warning { border-left-color: #ffc107 !important; }
+.borde-info { border-left-color: #0dcaf0 !important; }
+.borde-success { border-left-color: #198754 !important; }
+.borde-secondary { border-left-color: #6c757d !important; }
+
+@media (max-width: 768px) {
+  .panel { flex-direction: column; }
+  .panel-lateral { width: 100%; height: auto; position: static; }
+}
+
+@media print {
+  header, footer, .btn, nav { display: none !important; }
+}
